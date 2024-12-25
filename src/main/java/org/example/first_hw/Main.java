@@ -1,8 +1,5 @@
-package org.example;
+package org.example.first_hw;
 
-import org.example.first_hw.Backup;
-import org.example.first_hw.CopyStatus;
-import org.example.first_hw.FileBackupResult;
 import org.example.first_hw.exceptions.*;
 import org.example.first_hw.utils.ConsoleUtils;
 import org.example.first_hw.utils.UncloseableInputStream;
@@ -19,7 +16,7 @@ public class Main {
     static final Scanner inputScanner = new Scanner(UncloseableInputStream.wrap(System.in), CHARSET);
     public static void main(String[] args) {
         printEmphasized("\nРезервное копирование директории в " + BACKUP_DEST_PATH);
-        Backup backupHelper = null;
+        Backup backupHelper;
         while (true) {
             System.out.println("\nВведите путь к директории-источнику (или пустой ввод чтобы выйти):");
             var rawInp = inputScanner.nextLine();
